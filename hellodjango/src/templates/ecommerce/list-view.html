@@ -1,0 +1,13 @@
+{% include "ecommerce/search.html" %}
+<h1>
+    Vista de listado
+</h1>
+
+{% for product in products %}
+<ul>
+    <li>
+        <a href="/ecommerce/{{product.id}}">{{product.title}}</a>
+        <p>Vendido por: {{product.seller}}</p>
+    </li>
+</ul>
+{% endfor %}
